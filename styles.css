@@ -63,32 +63,16 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
   min-width: 0;
 }
 
 .brand-mark {
-  width: 54px;
+  width: clamp(140px, 16vw, 188px);
   height: 54px;
+  padding: 4px 7px;
   object-fit: contain;
-  border-radius: 8px;
-  background: #111;
-}
-
-.brand strong,
-.brand small {
-  display: block;
-}
-
-.brand strong {
-  font-size: 1rem;
-  letter-spacing: 0;
-}
-
-.brand small {
-  color: currentColor;
-  font-size: 0.78rem;
-  opacity: 0.78;
+  border-radius: 6px;
+  background: #fff;
 }
 
 .site-nav {
@@ -521,13 +505,6 @@ h3 {
 @media (max-width: 720px) {
   .site-header {
     min-height: 70px;
-  }
-
-  .brand small {
-    max-width: 180px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .nav-toggle {
